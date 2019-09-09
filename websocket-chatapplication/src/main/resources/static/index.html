@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>Chat Bot</title>
+      <link rel="stylesheet" href="/css/main.css" />
+      <link rel="icon" href="/images/chatbot.png" type="image/icon type">
+  </head>
+  <body>
+     <h1 class="header">CHAT APPLICATION <span class="small-header"> Using Spring Boot and WebSocket</span></h1>
+    <img alt="chat-app" src="/images/chat.png" class="image">
+    <div id="username-page">
+        <div class="username-page-container">
+        	 <div class="username-page-header">
+                <h1>CHAT BOT</h1>
+            </div>
+            <h2 class="username-page-title">Enter your username</h2>
+            <form id="usernameForm" name="usernameForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Username" autocomplete="off" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="accent username-submit">Start Chat <i class="fas fa-arrow-circle-right"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="chat-page" class="hidden">
+        <div class="chat-container">
+            <div class="chat-header">
+              <form id="exitForm" name="exitForm">
+                <h2>CHAT BOT - Live <button type="submit" id="btn-exit"><i class="fas fa-sign-out-alt"></i></button></h2>
+             </form>
+            </div>
+            <div class="connecting">
+                Connecting...
+            </div>
+            <ul id="messageArea">
+
+            </ul>
+            <form id="messageForm" name="messageForm" nameForm="messageForm">
+                <div class="form-group">
+                    <div class="input-group clearfix">
+                        <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
+                        <button type="submit" class="primary"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="https://kit.fontawesome.com/e482141f8a.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
